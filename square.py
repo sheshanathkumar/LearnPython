@@ -1,0 +1,7 @@
+length = int(input())
+breadth = int(input())
+tile = int(input())
+newLength = length + (tile - (length % tile))
+newBreadth = breadth + (tile - (breadth % tile))
+res = (newLength // tile) * (newBreadth // tile )
+print (res)
