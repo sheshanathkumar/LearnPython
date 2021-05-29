@@ -6,19 +6,18 @@ def cpuNotify (title, message):
     notification.notify (
         title = title,
         message = message,
-        app_icon = None,
+        app_icon = "D:\\Workspace\\MyWork\\PythonProject\\LearnPython\\machine-usage\\ram.ico",
         timeout = 5
     )
 
 
 if __name__ == '__main__':
 
-    stats = f" \nAvailable Memory: {psutil.virtual_memory()[0]//(1024*1024*1000)}GB" \
-            f"\nUsed Memory: {psutil.virtual_memory()[3]//(1024*1024*1000)}GB" \
+    stats = f"\nUsed Memory: {psutil.virtual_memory()[3]//(1024*1024*1000)}GB" \
             f"\nTotal Memory: {psutil.virtual_memory()[0]//(1024*1024*1000)}GB " \
             f"\nFree Memory: {psutil.virtual_memory()[4]//(1024*1024*1000)}GB"
 
-    cpuNotify("Stats", stats)
+    cpuNotify("Memory Status", stats)
 
 
 
